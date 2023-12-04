@@ -16,21 +16,6 @@
     <!-- navbar section -->
     <nav class="show-transparent">
       <div class="container navbar">
-        <button class="hamburger">
-          <svg
-            id="hamburger"
-            width="40"
-            height="32"
-            viewBox="0 0 40 32"
-            fill="#FEFEFE"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect width="40" height="4" rx="2" />
-            <rect y="14" width="40" height="4" rx="2" />
-            <rect y="28" width="40" height="4" rx="2" />
-          </svg>
-        </button>
-
         <button>
           <a href="./index.html">
             <img id="navbar-logo" src="./assets/images/logo.png" alt="" />
@@ -59,13 +44,59 @@
             </button>
           </div>
         </div>
+
+        <button class="hamburger">
+          <svg
+            id="hamburger"
+            width="40"
+            height="32"
+            viewBox="0 0 40 32"
+            fill="#FEFEFE"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="40" height="4" rx="2" />
+            <rect y="14" width="40" height="4" rx="2" />
+            <rect y="28" width="40" height="4" rx="2" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-navbar">
+        <div>
+          <div class="mobile-logo">
+            <img src="./assets/images/logo.png" alt="" />
+          </div>
+        </div>
+
+        <div>
+          <ul>
+            <li class="active">
+              <a href="./index.html"> Home </a>
+            </li>
+            <li>
+              <a href="./scripts.html"> Scripts </a>
+            </li>
+            <li>
+              <a href="./about.html"> About Us </a>
+            </li>
+          </ul>
+
+          <div>
+            <img src="./assets/images/coral.svg" alt="" />
+            <button>
+              <a href="./contact.html">
+                <p>Contact us</p>
+              </a>
+            </button>
+          </div>
+        </div>
       </div>
     </nav>
     <!-- end of navbar section -->
 
     <!-- banner section -->
     <div class="banner">
-      <video autoplay loop>
+      <video autopla loop>
         <source src="./assets/videos/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -142,74 +173,39 @@
             <div class="titles">
               <div class="titles-list">
                 <div class="title">
-                  <div>
-                    <button class="indicator left">
-                      <img src="./assets/images/arrow-left.svg" alt="" />
-                    </button>
-
-                    <button class="indicator right">
-                      <img src="./assets/images/arrow-right.svg" alt="" />
-                    </button>
-                  </div>
-
                   <img src="./assets/images/titles/1.png" alt="" />
+                  <span>Saw VI</span>
                 </div>
                 <div class="title">
-                  <div>
-                    <button class="indicator left">
-                      <img src="./assets/images/arrow-left.svg" alt="" />
-                    </button>
-
-                    <button class="indicator right">
-                      <img src="./assets/images/arrow-right.svg" alt="" />
-                    </button>
-                  </div>
-
                   <img src="./assets/images/titles/2.png" alt="" />
+                  <span>Prince of Persia</span>
                 </div>
                 <div class="title active">
-                  <div>
-                    <button class="indicator left">
-                      <img src="./assets/images/arrow-left.svg" alt="" />
-                    </button>
-
-                    <button class="indicator right">
-                      <img src="./assets/images/arrow-right.svg" alt="" />
-                    </button>
-                  </div>
-
                   <img src="./assets/images/titles/3.png" alt="" />
+                  <span>Liger</span>
                 </div>
                 <div class="title">
-                  <div>
-                    <button class="indicator left">
-                      <img src="./assets/images/arrow-left.svg" alt="" />
-                    </button>
-
-                    <button class="indicator right">
-                      <img src="./assets/images/arrow-right.svg" alt="" />
-                    </button>
-                  </div>
-
                   <img src="./assets/images/titles/4.png" alt="" />
+                  <span>Free Guy</span>
                 </div>
                 <div class="title">
-                  <div>
-                    <button class="indicator left">
-                      <img src="./assets/images/arrow-left.svg" alt="" />
-                    </button>
-
-                    <button class="indicator right">
-                      <img src="./assets/images/arrow-right.svg" alt="" />
-                    </button>
-                  </div>
-
                   <img src="./assets/images/titles/5.png" alt="" />
+                  <span>The Punisher</span>
                 </div>
               </div>
             </div>
 
-            <p>Saw VI</p>
+            <div class="indicators">
+              <button class="indicator left">
+                <img src="./assets/images/arrow-left.svg" alt="" />
+              </button>
+
+              <button class="indicator right">
+                <img src="./assets/images/arrow-right.svg" alt="" />
+              </button>
+            </div>
+
+            <p id="currentTitle">Liger</p>
           </div>
         </div>
       </div>
