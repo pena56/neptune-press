@@ -707,17 +707,17 @@ footer {
   fill: #134153;
 }
 
-.navbar > div > div {
+.coral-item {
   position: relative;
   width: 95px;
   height: 95px;
 }
-.navbar > div > div > img {
+.coral-item > img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
-.navbar > div > div > button {
+.coral-item > button {
   position: absolute;
   top: 0;
   left: 0;
@@ -734,7 +734,7 @@ footer {
   line-height: normal;
   letter-spacing: 0.104px;
 }
-.fixed .navbar > div > div > button {
+.fixed .coral-item > button {
   color: #eef8fb;
 }
 

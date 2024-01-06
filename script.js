@@ -18,7 +18,7 @@ function handleOutOfBoundsClickEvent(event, elements, callback) {
 
 const navbar = document.querySelector("nav");
 const navbarLogo = document.querySelector("#navbar-logo");
-const navbarCoral = document.querySelector("#navbar-coral");
+const navbarCoral = document.querySelectorAll("#navbar-coral");
 const menuSvg = document.querySelector("#hamburger");
 const menuButton = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-navbar");
@@ -83,19 +83,26 @@ if (navbar.classList.contains("show-transparent")) {
     if (window.scrollY > 100) {
       navbar.classList.add("fixed");
       navbarLogo.src = "./assets/images/logo-dark.png";
-      navbarCoral.src = "./assets/images/coral-dark.svg";
+      navbarCoral.forEach((item) => {
+        item.src = "./assets/images/coral-dark.svg";
+      });
       menuSvg.fill = "#134153";
     } else {
       navbar.classList.remove("fixed");
       navbarLogo.src = "./assets/images/logo.png";
-      navbarCoral.src = "./assets/images/coral.svg";
+      navbarCoral.forEach((item) => {
+        item.src = "./assets/images/coral.svg";
+      });
       menuSvg.fill = "#EEF8FB";
     }
   });
 } else {
   navbar.classList.add("fixed");
   navbarLogo.src = "./assets/images/logo-dark.png";
-  navbarCoral.src = "./assets/images/coral-dark.svg";
+  navbarCoral.forEach((item) => {
+    item.src = "./assets/images/coral-dark.svg";
+  });
+
   menuSvg.fill = "#EEF8FB";
 }
 
