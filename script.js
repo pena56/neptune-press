@@ -26,6 +26,7 @@ const leftTriggerButton = document.querySelector(".indicators .left");
 const rightTriggerButton = document.querySelector(".indicators .right");
 const currentTitle = document.querySelector("#currentTitle");
 const musicPlayer = document.querySelectorAll(".music");
+const revealLogoVideo = document.querySelector("#revealLogo");
 
 const rearrangeListLeft = () => {
   const titlesList = document.querySelector(".titles-list");
@@ -160,5 +161,13 @@ if (musicPlayer.length > 0) {
         );
       }
     });
+  });
+}
+
+if (revealLogoVideo) {
+  revealLogoVideo.addEventListener("loadeddata", () => {
+    setTimeout(() => {
+      revealLogoVideo.muted = true;
+    }, 10000);
   });
 }

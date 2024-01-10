@@ -494,6 +494,7 @@ footer {
   align-items: center;
   z-index: 20px;
   background: rgba(8, 43, 57, 0.66);
+  padding: 3rem;
 }
 /* .banner::before {
   content: "";
@@ -723,6 +724,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
