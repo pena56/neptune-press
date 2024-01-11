@@ -220,14 +220,16 @@ footer {
 
 .footer-top-section,
 .footer-bottom-section {
-  padding-top: 78px;
-  padding-bottom: 78px;
+  /* padding-top: 78px;
+  padding-bottom: 78px; */
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 
 .footer-top-section {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 20px;
 }
 
 .footer-bottom-section {
@@ -1447,12 +1449,12 @@ footer {
 
   .footer-top-section,
   .footer-bottom-section {
-    padding-top: 38px;
-    padding-bottom: 38px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .footer-top-section {
-    gap: 60px;
+    gap: 20px;
   }
 
   .logo-container > p {
@@ -1703,12 +1705,12 @@ footer {
 
   .footer-top-section,
   .footer-bottom-section {
-    padding-top: 58px;
-    padding-bottom: 58px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 
   .footer-top-section {
-    gap: 80px;
+    gap: 20px;
   }
 
   .logo-container > p {
