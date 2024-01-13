@@ -168,6 +168,6 @@ if (revealLogoVideo) {
   revealLogoVideo.addEventListener("loadeddata", () => {
     setTimeout(() => {
       revealLogoVideo.muted = true;
-    }, 10000);
+    }, 10300);
   });
 }
