@@ -497,7 +497,26 @@ footer {
   align-items: center;
   z-index: 20px;
   background: rgba(8, 43, 57, 0.66);
-  padding: 3rem;
+  padding-bottom: 3rem;
+}
+
+.fade-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  background: linear-gradient(to right, rgba(8, 43, 57, 0.9), transparent);
+  z-index: 20;
+}
+.fade-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  background: linear-gradient(to right, transparent, rgba(8, 43, 57, 0.9));
+  z-index: 20;
 }
 /* .banner::before {
   content: "";
@@ -565,12 +584,40 @@ footer {
   object-fit: contain;
 }
 
+.scripts-container-1 {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.scripts-container-group {
+  width: 35%;
+  max-width: 35%;
+  display: flex;
+}
+
+.scripts-container-group {
+  width: 35%;
+  max-width: 35%;
+  display: flex;
+  gap: 10px;
+}
+
+.scripts-container-group.right {
+  justify-content: flex-end;
+}
+
+.scripts-container-seperator {
+  flex: 1;
+}
+
 .scripts-container {
   position: relative;
   width: 100%;
   height: 132px;
   display: flex;
-  overflow: hidden;
+  overflow-y: scroll;
+  /* overflow: hidden; */
   margin: 0 auto;
   z-index: 10px;
 }
@@ -615,11 +662,59 @@ footer {
 
 .script-item {
   width: 145px;
-  height: 132px;
+  aspect-ratio: 1.09848484;
   flex-shrink: 0;
   position: relative;
   z-index: 10;
 }
+
+@media only screen and (max-width: 1150px) {
+  .script-item {
+    width: 130px;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .script-item {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .script-item {
+    width: 110px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .script-item {
+    width: 90px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .script-item {
+    width: 70px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .script-item {
+    width: 55px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .script-item {
+    width: 45px;
+  }
+}
+
+.script-item-gap {
+  width: 145px;
+  height: 132px;
+}
+
 .script-item > img {
   width: 100%;
   height: 100%;
@@ -642,7 +737,7 @@ footer {
   font-size: 10.812px;
   font-style: normal;
   font-weight: 400;
-  line-height: 11.893px;
+  /* line-height: 11.893px; */
   text-align: center;
   max-width: 60%;
 }
@@ -1425,6 +1520,7 @@ footer {
 
   .banner-wrapper {
     gap: 14px;
+    padding-bottom: 1rem;
   }
 
   .banner-wrapper > p {
@@ -1551,10 +1647,15 @@ footer {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .script-item {
+  /* .script-item {
     width: 67px;
     height: 67px;
     position: relative;
+  } */
+
+  .script-item-gap {
+    width: 67px;
+    height: 67px;
   }
 
   .script-item > div > p {
