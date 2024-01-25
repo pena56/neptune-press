@@ -68,6 +68,23 @@ if (leftTriggerButton && rightTriggerButton) {
     rearrangeListRight();
   });
 
+  const titlesList = document.querySelector(".titles-list");
+  const allTitles = document.querySelectorAll(".title");
+  const isEven = allTitles.length % 2 === 0;
+
+  if (isEven) {
+    const lastTitle = allTitles
+      .item(Math.floor(allTitles.length / 2))
+      .cloneNode(true);
+    titlesList.appendChild(lastTitle);
+  }
+
+  const newTitlesList = document.querySelectorAll(".title");
+  const activeTitle = newTitlesList.item(Math.floor(newTitlesList.length / 2));
+  activeTitle.classList.add("active");
+  const movieName = activeTitle.querySelector("span");
+  currentTitle.textContent = movieName.textContent;
+
   setInterval(() => {
     rearrangeListRight();
   }, 5000);
