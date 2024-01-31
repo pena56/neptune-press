@@ -990,6 +990,15 @@ footer {
   flex-shrink: 0;
   position: relative;
 }
+/* .title > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 20;
+} */
 .title::before {
   content: "";
   position: absolute;
@@ -1162,6 +1171,8 @@ footer {
 
 .scripts-section > div {
   position: relative;
+  max-width: 180px;
+  margin: 0 auto;
 }
 .scripts-section > div > img {
   width: 100%;
@@ -1183,7 +1194,7 @@ footer {
   color: #fefefe;
   text-align: center;
   font-family: Raleway;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1193,7 +1204,7 @@ footer {
   color: #fefefe;
   text-align: center;
   font-family: var(--np-font-cherry);
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 26.4px;
@@ -1244,36 +1255,19 @@ footer {
   width: 60%;
   /* background-color: #134153; */
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  border-radius: 16px;
-  height: 581px;
+  /* border-radius: 16px; */
+  /* max-height: 581px; */
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
-.trailer-container > div {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background-color: rgba(18, 65, 84, 0.7); */
-}
-.trailer-container > div::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* background-color: rgba(18, 65, 84, 0.5); */
-}
+
 .trailer-container > div > img {
   width: 100%;
-  height: 100%;
+  max-width: 250px;
+  height: auto;
   object-fit: contain;
 }
 .trailer-container > div > button {
@@ -1291,9 +1285,9 @@ footer {
 .synopsis-writeup {
   width: 40%;
   color: #134153;
-  text-align: justify;
+  text-align: right;
   font-family: Raleway;
-  font-size: 18px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1652,8 +1646,8 @@ footer {
 
   .trailer-container {
     width: 100%;
-    border-radius: 16px;
-    height: 282px;
+    /* border-radius: 16px; */
+    /* height: 282px; */
   }
 
   .synopsis-writeup {

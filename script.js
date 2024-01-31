@@ -24,6 +24,7 @@ const menuButton = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-navbar");
 const leftTriggerButton = document.querySelector(".indicators .left");
 const rightTriggerButton = document.querySelector(".indicators .right");
+const indicator = document.querySelector(".indicators");
 const currentTitle = document.querySelector("#currentTitle");
 const musicPlayer = document.querySelectorAll(".music");
 const revealLogoVideo = document.querySelector("#revealLogo");
@@ -41,6 +42,7 @@ const rearrangeListLeft = () => {
   newActiveItem.classList.add("active");
 
   currentTitle.textContent = movieName.textContent;
+  indicator.href = newActiveItem.href;
 };
 
 const rearrangeListRight = () => {
@@ -57,6 +59,7 @@ const rearrangeListRight = () => {
   newActiveItem.classList.add("active");
 
   currentTitle.textContent = movieName.textContent;
+  indicator.href = newActiveItem.href;
 };
 
 if (leftTriggerButton && rightTriggerButton) {
@@ -84,6 +87,7 @@ if (leftTriggerButton && rightTriggerButton) {
   activeTitle.classList.add("active");
   const movieName = activeTitle.querySelector("span");
   currentTitle.textContent = movieName.textContent;
+  indicator.href = activeTitle.href;
 
   setInterval(() => {
     rearrangeListRight();
@@ -184,6 +188,7 @@ if (musicPlayer.length > 0) {
 if (revealLogoVideo) {
   revealLogoVideo.addEventListener("loadeddata", () => {
     revealLogoVideo.play();
+    revealLogoVideo.muted = false;
 
     setTimeout(() => {
       revealLogoVideo.muted = true;
