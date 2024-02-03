@@ -186,9 +186,9 @@ if (musicPlayer.length > 0) {
 }
 
 if (revealLogoVideo) {
+  revealLogoVideo.muted = false;
   revealLogoVideo.addEventListener("loadeddata", () => {
     revealLogoVideo.play();
-    revealLogoVideo.muted = false;
 
     setTimeout(() => {
       revealLogoVideo.muted = true;

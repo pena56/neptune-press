@@ -1154,14 +1154,20 @@ footer {
 }
 
 .about {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   color: #134153;
   text-align: justify;
   font-family: Raleway;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 30px;
   letter-spacing: 0.5px;
+}
+.about > span {
+  font-weight: bold;
 }
 .scripts-section {
   display: grid;
@@ -1228,6 +1234,17 @@ footer {
   line-height: 22px;
 }
 
+.synopsis-title {
+  color: #134153;
+  text-align: center;
+  font-family: var(--np-font-cherry);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 12px;
+}
+
 .banner-header > h1 {
   color: #134153;
   text-align: center;
@@ -1267,7 +1284,7 @@ footer {
 
 .trailer-container > div > img {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   height: auto;
   object-fit: contain;
 }
@@ -1286,7 +1303,7 @@ footer {
 .synopsis-writeup {
   width: 40%;
   color: #134153;
-  text-align: right;
+  text-align: left;
   font-family: Raleway;
   font-size: 22px;
   font-style: normal;
@@ -1298,7 +1315,8 @@ footer {
 .synopsis-writeup > p:first-child {
   font-weight: 600;
   font-size: 30px;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
+  text-align: center;
 }
 
 .script-details {
@@ -1331,7 +1349,7 @@ footer {
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  /* gap: 0px; */
   background-color: #ecfef2;
 }
 
@@ -1407,19 +1425,19 @@ footer {
 }
 
 .thumbnail {
-  width: 32px;
-  height: 32px;
+  width: 60px;
+  /* height: 40px; */
 }
 
 .thumbnail > img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .award {
   width: 100%;
-  padding: 24px;
+  padding: 8px 0;
   display: flex;
   gap: 14px;
 }
@@ -1437,11 +1455,16 @@ footer {
   overflow: hidden;
 }
 
+.award-image {
+  width: 200px;
+}
+
 .award-image > img,
 .cast-image > img {
   width: 100%;
   height: auto;
   object-fit: contain;
+  object-position: top;
 }
 
 .awards-details {
@@ -1483,6 +1506,7 @@ footer {
 }
 
 .cast-details {
+  /* padding-top: 24px; */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1799,8 +1823,13 @@ footer {
   .award-image,
   .cast-image {
     width: 100%;
-    height: fit-content;
-    aspect-ratio: 1/1;
+  }
+
+  .cast-image > img {
+    width: 40%;
+    margin: 0 auto;
+    height: auto;
+    object-fit: contain;
   }
 
   .music-container,
