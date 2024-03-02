@@ -29,7 +29,7 @@ const indicator = document.querySelector(".indicators");
 const currentTitle = document.querySelector("#currentTitle");
 const musicPlayer = document.querySelectorAll(".music");
 const revealLogoVideo = document.querySelector("#revealLogo");
-const revealVideoCover = document.querySelector(".revealVideoCoverId");
+const revealVideoCover = document.querySelector("#revealVideoCoverId");
 
 const rearrangeListLeft = () => {
   const titlesList = document.querySelector(".titles-list");
@@ -189,27 +189,11 @@ if (musicPlayer.length > 0) {
 
 if (revealLogoVideo) {
   revealLogoVideo.addEventListener("loadeddata", () => {
-    // revealLogoVideo.autoplay = true;
-    // revealLogoVideo.muted = false;
-    // revealLogoVideo.play();
-    // homeLink.click();
-
-    const isVideoPlaying = (video) =>
-      !!(
-        video.currentTime > 0 &&
-        !video.paused &&
-        !video.ended &&
-        video.readyState > 2
-      );
-
-    setTimeout(() => {
-      if (isVideoPlaying(revealLogoVideo)) {
-        setTimeout(() => {
-          revealLogoVideo.muted = true;
-        }, 5300);
-      } else {
-        revealVideoCover.classList.add("showRevealVideoCover");
-      }
-    }, 5000);
+    revealLogoVideo.addEventListener("playing", () => {
+      setTimeout(() => {
+        revealLogoVideo.muted = true;
+      }, 10300);
+      revealVideoCover.classList.remove("showRevealVideoCover");
+    });
   });
 }
