@@ -186,10 +186,10 @@ if (musicPlayer.length > 0) {
 }
 
 if (revealLogoVideo) {
-  revealLogoVideo.muted = false;
   revealLogoVideo.addEventListener("loadeddata", () => {
-    revealLogoVideo.play();
-
+    // revealLogoVideo.autoplay = true;
+    // revealLogoVideo.muted = false;
+    // revealLogoVideo.play();
     setTimeout(() => {
       revealLogoVideo.muted = true;
     }, 10300);
