@@ -192,12 +192,23 @@ if (revealLogoVideo) {
     // revealLogoVideo.muted = false;
     // revealLogoVideo.play();
     // homeLink.click();
-    if (revealLogoVideo.paused) {
-      homeLink.click();
-    } else {
-      setTimeout(() => {
-        revealLogoVideo.muted = true;
-      }, 10300);
-    }
+
+    const isVideoPlaying = (video) =>
+      !!(
+        video.currentTime > 0 &&
+        !video.paused &&
+        !video.ended &&
+        video.readyState > 2
+      );
+
+    setTimeout(() => {
+      if (isVideoPlaying(revealLogoVideo)) {
+        setTimeout(() => {
+          revealLogoVideo.muted = true;
+        }, 9300);
+      } else {
+        homeLink.click();
+      }
+    }, 1000);
   });
 }
