@@ -19,6 +19,7 @@ function handleOutOfBoundsClickEvent(event, elements, callback) {
 const navbar = document.querySelector("nav");
 const navbarLogo = document.querySelector("#navbar-logo");
 const navbarCoral = document.querySelectorAll("#navbar-coral");
+const homeLink = document.querySelector("#homeLink");
 const menuSvg = document.querySelector("#hamburger");
 const menuButton = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-navbar");
@@ -190,8 +191,13 @@ if (revealLogoVideo) {
     // revealLogoVideo.autoplay = true;
     // revealLogoVideo.muted = false;
     // revealLogoVideo.play();
-    setTimeout(() => {
-      revealLogoVideo.muted = true;
-    }, 10300);
+    // homeLink.click();
+    if (revealLogoVideo.paused) {
+      homeLink.click();
+    } else {
+      setTimeout(() => {
+        revealLogoVideo.muted = true;
+      }, 10300);
+    }
   });
 }
