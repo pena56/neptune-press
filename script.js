@@ -205,10 +205,10 @@ if (revealLogoVideo) {
       if (isVideoPlaying(revealLogoVideo)) {
         setTimeout(() => {
           revealLogoVideo.muted = true;
-        }, 9300);
+        }, 7300);
       } else {
         homeLink.click();
       }
-    }, 1000);
+    }, 3000);
   });
 }
