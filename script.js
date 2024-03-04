@@ -32,6 +32,23 @@ const revealLogoVideo = document.querySelector("#revealLogo");
 const revealVideoCover = document.querySelector("#revealVideoCoverId");
 const revealAudio = document.querySelector("#revealAudio");
 
+if (revealVideoCover) {
+  window.addEventListener("load", () => {
+    revealAudio.play();
+  });
+  // if (revealVideoCover.complete) {
+
+  // }
+  // revealVideoCover.addEventListener("loadeddata", () => {
+  //   revealLogoVideo.addEventListener("playing", () => {
+  //     setTimeout(() => {
+  //       revealLogoVideo.muted = true;
+  //     }, 10300);
+  //     revealVideoCover.classList.remove("showRevealVideoCover");
+  //   });
+  // });
+}
+
 const rearrangeListLeft = () => {
   const titlesList = document.querySelector(".titles-list");
   const activeItem = titlesList.querySelector(".title.active");
@@ -186,18 +203,4 @@ if (musicPlayer.length > 0) {
       }
     });
   });
-}
-
-if (revealVideoCover) {
-  if (revealVideoCover.complete) {
-    revealAudio.play();
-  }
-  // revealVideoCover.addEventListener("loadeddata", () => {
-  //   revealLogoVideo.addEventListener("playing", () => {
-  //     setTimeout(() => {
-  //       revealLogoVideo.muted = true;
-  //     }, 10300);
-  //     revealVideoCover.classList.remove("showRevealVideoCover");
-  //   });
-  // });
 }
