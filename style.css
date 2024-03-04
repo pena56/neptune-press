@@ -192,6 +192,10 @@ video,
   display: none;
 }
 
+#revealAudio {
+  display: none;
+}
+
 .showRevealVideoCover {
   display: block;
 }
