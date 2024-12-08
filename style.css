@@ -1919,6 +1919,26 @@ footer {
   }
 }
 
+#play-button {
+  width: fit-content;
+  color: white;
+  font-family: Raleway;
+  font-size: 16px;
+  position: absolute;
+  bottom: 120px;
+  font-weight: 600;
+}
+
+.hide-button {
+  display: none;
+}
+
+.extra-video {
+  width: 100%;
+  aspect-ratio: 2/0.5;
+  /* background-color: red; */
+}
+
 /* Styles for medium screens (tablets) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   nav {

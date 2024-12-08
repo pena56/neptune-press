@@ -19,7 +19,6 @@ function handleOutOfBoundsClickEvent(event, elements, callback) {
 const navbar = document.querySelector("nav");
 const navbarLogo = document.querySelector("#navbar-logo");
 const navbarCoral = document.querySelectorAll("#navbar-coral");
-const homeLink = document.querySelector("#homeLink");
 const menuSvg = document.querySelector("#hamburger");
 const menuButton = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-navbar");
@@ -31,6 +30,7 @@ const musicPlayer = document.querySelectorAll(".music");
 const revealLogoVideo = document.querySelector("#revealLogo");
 const revealVideoCover = document.querySelector("#revealVideoCoverId");
 const revealAudio = document.querySelector("#revealAudio");
+const playButtton = document.querySelector("#play-button");
 
 const rearrangeListLeft = () => {
   const titlesList = document.querySelector(".titles-list");
@@ -109,14 +109,14 @@ if (navbar.classList.contains("show-transparent")) {
       navbar.classList.add("fixed");
       navbarLogo.src = "./assets/images/logo-dark.png";
       navbarCoral.forEach((item) => {
-        item.src = "./assets/images/coral-dark.svg";
+        item.src = "./assets/images/script-dark.svg";
       });
       menuSvg.fill = "#134153";
     } else {
       navbar.classList.remove("fixed");
       navbarLogo.src = "./assets/images/logo.png";
       navbarCoral.forEach((item) => {
-        item.src = "./assets/images/coral.svg";
+        item.src = "./assets/images/script.svg";
       });
       menuSvg.fill = "#EEF8FB";
     }
@@ -125,7 +125,7 @@ if (navbar.classList.contains("show-transparent")) {
   navbar.classList.add("fixed");
   navbarLogo.src = "./assets/images/logo-dark.png";
   navbarCoral.forEach((item) => {
-    item.src = "./assets/images/coral-dark.svg";
+    item.src = "./assets/images/script-dark.svg";
   });
 
   menuSvg.fill = "#EEF8FB";
@@ -196,5 +196,21 @@ if (revealLogoVideo) {
     setTimeout(() => {
       revealLogoVideo.muted = true;
     }, 10300);
+  });
+}
+
+playButtton?.addEventListener("click", () => {
+  revealLogoVideo.muted = false;
+
+  revealLogoVideo.play();
+
+  setTimeout(() => {
+    revealLogoVideo.muted = true;
+  }, 10300);
+});
+
+if (revealLogoVideo) {
+  revealLogoVideo.addEventListener("play", () => {
+    playButtton?.classList.add("hide-button");
   });
 }
